@@ -1,0 +1,62 @@
+extends _layout
+
+block head
+	title Dum build system — configuration
+	link(rel='stylesheet' href='./style/config.css')
+
+block content
+	h1.home
+		a(href='/') dum
+
+	section
+		h1 config
+		.content
+			p By putting a #[code dum] entry in your #[code package.json], you can change some settings.
+			p For most projects, this should be unnecessary.
+			pre.
+				#[span.key dum] {
+					#[span.key opts] {
+						#[span.key jade] {#[span.key pretty] #[span.bool true]}
+					}
+				}
+
+	section
+		h1 in-dir
+		.content
+			.default #[code "assets"] or #[code "src"], whichever exists.
+			p This directory is transformed to #[code out-dir].
+
+	section
+		h1 out-dir
+		.content
+			.default #[code "public"] for #[code "assets"], or #[code "lib"] for #[code "src"].
+			p This directory is written to as the output.
+			p Don't keep anything here, because it'll get written over.
+
+	section
+		h1 port
+		.content
+			.default 8000
+			p #[a(href='//en.wikipedia.org/wiki/Port_(computer_networking)') Port] number for #[code dum serve].
+			p #[span.aside Intentionally not 80. Dum is not a production server.]
+
+	section
+		h1 bower
+		.content
+			.default #[code {"in-dir": "bower_components", "out-dir": "lib"}]
+			p Paths to use for copying bower components to #[code out-dir].
+			p #[code bower.out-dir] is relative to #[code out-dir].
+			p Set to #[code false] to disable.
+
+	section
+		h1 opts
+		.content
+			.default #[code {}]
+			p Keys are the names of jstransformers. #[span.aside The name of #[code jstransformer-jade] is #[code "jade"].]
+			p Values are the options for that transform.
+
+	section
+		h1 sound
+		.content
+			.default #[code true]
+			p Whether to play sounds on errors.

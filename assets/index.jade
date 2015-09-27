@@ -1,0 +1,98 @@
+extends _layout
+
+block head
+	title Dum build system
+	link(rel='stylesheet' href='./style/index.css')
+
+block content
+	section
+		h1#dum dum
+		.content
+			p is a simple build system for web sites.
+
+			#dirs
+				pre#in.
+					assets/
+						_layout.jade
+						index.jade
+						style/
+							index.styl
+							_lib.styl
+					bower_components/
+						bootstrap
+				#arrow ➜
+				pre#out.
+					public/
+						index.html
+						style/
+							index.css
+						lib/
+							bootstrap
+
+			p.
+				It's a chore to write html/css/javascript directly.
+				Tools like #[a(href='//jade-lang.com') jade] and
+				#[a(href='//learnboost.github.io/stylus') stylus] make this neater.
+				Dum brings all of these tools together.
+			p It's based on #[a(href='//nodejs.org') node.js] #[span.aside so install that] but you won't have to write any JavaScript.
+
+	section
+		h1 simple
+		.content
+			p Dum doesn't require plugins or build scripts.
+			p.
+				It just applies
+				#[a(href='//github.com/jstransformers/jstransformer') jstransformers]
+				#[span.aside #[a(href='//www.npmjs.com/search?q=jstransformer') list]]
+				based on file extensions.
+			p If you don't want files/directories sent to #[code public], just start their names with an underscore (#[code _]).
+			p #[span.aside Files with no transformer will be copied directly. #[a(href='//bower.io') bower_components] are never transformed.]
+			p.
+				Dum runs a static web server, so you won't need it in production —
+				just copy #[code public] to your web server to deploy.
+	section
+		h1 easy
+		.content
+			p.
+				Your #[a(href='//docs.npmjs.com/files/package.json') package.json]
+				#[span.aside a file listing #[a(href='//npmjs.com') npm] dependencies]
+				is your configuration.
+			pre.
+				#[span.key scripts] {#[span.key start] #[span.str dum serve]},
+				#[span.key devDependencies] {
+					#[span.key dum] #[span.str dum-build/dum],
+					#[span.key jstransformer-jade] #[span.str],
+					#[span.key jstransformer-stylus] #[span.str]
+				}
+			p #[span.aside If you need, you can add more #[a(href='config') options].]
+
+			p.
+				Just open a console in your package directory (the one with #[code assets] and #[code package.json] in it)
+				and run #[code npm install] and #[code npm start] and look at #[a(href='http://localhost:8000') localhost:8000].
+			p When you change files, dum will update #[code public], so refresh your browser to see the changes.
+	section
+		h1 go!
+		.content
+			p Start by cloning a project template:
+			table#templates
+				col#link
+				tr
+					td #[a(href='//github.com/dum-build/dum-web-template') web]
+					td #[code= 'git clone https://github.com/dum-build/dum-web-template.git']
+				tr
+					td #[a(href='//github.com/dum-build/dum-library-template') library]
+					td #[code= 'git clone https://github.com/dum-build/dum-library-template.git']
+
+			p Libraries work the same as web projects but don't serve anything.
+			p.
+				If you think your website has a great feature, break it out into a
+				#[a(href='//webcomponents.org') web component] and distribute it with
+				#[a(href='//bower.io') bower].
+
+	section
+		h1 more
+		.content
+			p.
+				Contribute (report bugs or help develop dum) on
+				#[a(href='//github.com/dum-build/dum') github].
+			p Similar projects include #[a(href='//gruntjs.com') grunt], #[a(href='//gulpjs.com') gulp], and #[a(href='//github.com/broccolijs/broccoli') broccoli].
