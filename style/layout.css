@@ -1,0 +1,11 @@
+@import '//fonts.googleapis.com/css?family=Fira+Mono|Varela+Round';
+@import '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css';
+body {
+  margin: 0;
+  font-family: Varela Round;
+  background: repeating-linear-gradient(45deg, #eff, #eff 1rem, #e8ffff 1rem, #e8ffff 2rem);
+}
+main {
+  margin: 0 auto;
+  max-width: 700px;
+}

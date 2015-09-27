@@ -1,0 +1,108 @@
+@media all and (min-width: 700px) {
+  section {
+    display: flex;
+    flex-direction: row;
+  }
+  section > h1 {
+    flex-basis: 6rem;
+    flex-shrink: 0;
+  }
+  section > .content {
+    flex-grow: 1;
+  }
+  #dirs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+@media not all and (min-width: 700px) {
+  section {
+    display: block;
+  }
+  section > h1 {
+    text-align: center;
+  }
+  #dirs #arrow {
+    text-align: center;
+    margin: -0.25em 0;
+  }
+}
+#dirs #in,
+#dirs #out {
+  width: 16em;
+  border-radius: 1em;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #000;
+  background: #ffe;
+}
+#dirs #arrow {
+  color: #08f;
+  font-size: 450%;
+}
+section > h1 {
+  color: #f80;
+  margin: 0;
+  font-size: 150%;
+}
+section > h1#dum {
+  font-size: 250%;
+}
+section > .content {
+  margin-bottom: 1em;
+  border-radius: 2em;
+}
+section p {
+  margin: 0.5em 0;
+}
+span.aside {
+  color: #444;
+}
+span.aside:before {
+  content: '(';
+}
+span.aside:after {
+  content: ')';
+}
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #800;
+}
+code {
+  font-family: Fira Mono;
+}
+pre {
+  margin: 0 auto;
+  width: 20em;
+  font-family: Fira Mono;
+  color: #888;
+}
+pre .key:before,
+pre .val:before {
+  color: #888;
+  content: '"';
+}
+pre .key:after,
+pre .val:after {
+  color: #888;
+  content: '"';
+}
+pre .key {
+  color: #048;
+}
+pre .val {
+  color: #c40;
+}
+pre.dir {
+  color: #000;
+}
+#templates col#link {
+  width: 5em;
+}
+#more {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

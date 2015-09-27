@@ -1,0 +1,28 @@
+<!DOCTYPE html><html><head><title>Dum example</title><link rel="stylesheet" href="./style/layout.css"><link rel="stylesheet" href="./style/index.css"></head><body><!--headernav
+	a(href='//github.com/dum-build/dum') <i class="fa fa-github"></i>
+--><main><section><h1 id="dum">dum</h1><div class="content"><p>is a simple build system for web and <a href="//nodejs.org">node.js</a> projects.</p><div id="dirs"><pre id="in">assets/
+	_layout.jade
+	index.jade
+	style/
+		index.styl
+		_lib.styl
+bower_components/
+	bootstrap</pre><div id="arrow">➜</div><pre id="out">public/
+	index.html
+	style/
+		index.css
+	lib/
+		bootstrap
+</pre></div><p>For web projects, knowledge of JavaScript is not necessary.</p></div></section><section><h1>simple</h1><div class="content"><p>It's under 1000 lines of code and does not use plugins or build scripts.</p><p>It just applies
+<a href="//github.com/jstransformers/jstransformer">jstransformers</a>
+<span class="aside"><a href="//www.npmjs.com/search?q=jstransformer">list</a></span>
+based on file extensions. <span class="aside">Files with no associated transformer will be copied directly.</span>
+</p></div></section><section><h1>easy</h1><div class="content"><p>Your <a href="//docs.npmjs.com/files/package.json">package.json</a>
+<span class="aside">a file listing <a href="//npmjs.com">npm</a> dependencies</span>
+is your configuration.</p><pre><span class="key">scripts</span>: { <span class="key">serve</span>: <span class="val">dum serve</span> },
+<span class="key">devDependencies</span>: {
+	<span class="key">dum</span>: <span class="val">dum-build/dum</span>,
+	<span class="key">jstransformer-jade</span>: <span class="val"></span>,
+	<span class="key">jstransformer-stylus</span>: <span class="val"></span>
+}
+</pre></div></section><section><h1>go!</h1><div class="content"><p>Start by cloning a project template:</p><table id="templates"><col id="link"><tr><td><a href="//github.com/dum-build/dum-web-template">web</a></td><td><code>git clone https://github.com/dum-build/dum-web-template.git</code></td></tr></table></div></section><section><h1>more</h1><div class="content"><ul id="more"><li><a href="//github.com/dum-build/dum">contribute</a></li></ul></div></section></main></body></html>
