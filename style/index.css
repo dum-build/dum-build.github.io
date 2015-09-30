@@ -50,7 +50,9 @@ section > h1#dum {
   font-size: 250%;
 }
 section > .content {
-  margin-bottom: 1em;
+  background: #fff;
+  padding: 0.25em;
+  margin-bottom: 0.5em;
   border-radius: 2em;
 }
 section p {
