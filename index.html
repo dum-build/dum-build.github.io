@@ -3,7 +3,7 @@
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga')
 ga('create', 'UA-68271228-1', 'auto')
-ga('send', 'pageview')</script><link rel="stylesheet" href="./style/index.css"></head><body><main><section><h1 id="dum">dum</h1><div class="content"><p>is a simple build system for web and <a href="//nodejs.org">node.js</a> projects.</p><div id="dirs"><pre id="in">assets/
+ga('send', 'pageview')</script><link rel="stylesheet" href="./style/index.css"></head><body><main><section><h1 id="dum">dum</h1><div class="content"><p>is a simple build system for web sites.</p><div id="dirs"><pre id="in">assets/
 	_layout.jade
 	index.jade
 	style/
@@ -16,16 +16,28 @@ bower_components/
 		index.css
 	lib/
 		bootstrap
-</pre></div><p>For web projects, knowledge of JavaScript is not necessary.</p></div></section><section><h1>simple</h1><div class="content"><p>It's under 1000 lines of code and does not use plugins or build scripts.</p><p>It just applies
+</pre></div><p>It's a chore to write html/css/javascript directly.
+Tools like <a href="//jade-lang.com">jade</a> and
+<a href="//learnboost.github.io/stylus">stylus</a> make this neater.
+Dum brings all of these tools together.</p><p>It's based on <a href="//nodejs.org">node.js</a> <span class="aside">so install that</span> but you won't have to write any JavaScript.</p></div></section><section><h1>simple</h1><div class="content"><p>Dum doesn't require plugins or build scripts.</p><p>It just applies
 <a href="//github.com/jstransformers/jstransformer">jstransformers</a>
 <span class="aside"><a href="//www.npmjs.com/search?q=jstransformer">list</a></span>
-based on file extensions. <span class="aside">Files with no associated transformer will be copied directly.</span>
-</p></div></section><section><h1>easy</h1><div class="content"><p>Your <a href="//docs.npmjs.com/files/package.json">package.json</a>
+based on file extensions.</p><p>If you don't want files/directories sent to <code>public</code>, just start their names with an underscore (<code>_</code>).</p><p><span class="aside">Files with no transformer will be copied directly. <code>bower_components</code> are never transformed.</span></p><p>Dum runs a static web server, so you won't need it in production —
+just copy <code>public</code> to your web server to deploy.</p></div></section><section><h1>easy</h1><div class="content"><p>Your <a href="//docs.npmjs.com/files/package.json">package.json</a>
 <span class="aside">a file listing <a href="//npmjs.com">npm</a> dependencies</span>
-is your configuration.</p><pre><span class="key">scripts</span>: { <span class="key">serve</span>: <span class="val">dum serve</span> },
-<span class="key">devDependencies</span>: {
-	<span class="key">dum</span>: <span class="val">dum-build/dum</span>,
-	<span class="key">jstransformer-jade</span>: <span class="val"></span>,
-	<span class="key">jstransformer-stylus</span>: <span class="val"></span>
+is your configuration.</p><pre><span class="key">scripts</span> {<span class="key">start</span> <span class="str">dum serve</span>},
+<span class="key">devDependencies</span> {
+	<span class="key">dum</span> <span class="str">dum-build/dum</span>,
+	<span class="key">jstransformer-jade</span> <span class="str"></span>,
+	<span class="key">jstransformer-stylus</span> <span class="str"></span>
+}</pre><p>If you need, you can add more options in <code>package.json</code>.</p><pre><span class="key">dumConfig</span> {
+	<span class="key">transform</span> {
+		<span class="key">jade</span> {<span class="key">pretty</span> <span class="bool">true</span>}
+	}
 }
-</pre></div></section><section><h1>go!</h1><div class="content"><p>Start by cloning a project template:</p><table id="templates"><col id="link"><tr><td><a href="//github.com/dum-build/dum-web-template">web</a></td><td><code>git clone https://github.com/dum-build/dum-web-template.git</code></td></tr></table></div></section><section><h1>more</h1><div class="content"><ul id="more"><li><a href="//github.com/dum-build/dum"><i class="fa fa-github"></i></a></li></ul></div></section></main></body></html>
+</pre><p>Just open a console in your package directory (the one with <code>assets</code> and <code>package.json</code> in it)
+and run <code>npm install</code> and <code>npm start</code> and look at <a href="http://localhost:8000">localhost</a>.</p><p>When you change files, dum will update <code>public</code>, so refresh your browser to see the changes.</p></div></section><section><h1>go!</h1><div class="content"><p>Start by cloning a project template:</p><table id="templates"><col id="link"><tr><td><a href="//github.com/dum-build/dum-web-template">web</a></td><td><code>git clone https://github.com/dum-build/dum-web-template.git</code></td></tr><tr><td><a href="//github.com/dum-build/dum-library-template">library</a></td><td><code>git clone https://github.com/dum-build/dum-library-template.git</code></td></tr></table><p>Libraries work the same as web projects but don't serve anything.</p><p>If you think your website has a great feature, break it out into a
+<a href="//webcomponents.org">web component</a> and distribute it with
+<a href="//bower.io">bower</a>.
+</p></div></section><section><h1>more</h1><div class="content"><p>Contribute (report bugs or help develop dum) on
+<a href="//github.com/dum-build/dum">github</a>.</p></div></section></main></body></html>

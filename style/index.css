@@ -1,4 +1,4 @@
-@media all and (min-width: 700px) {
+@media all and (min-width: 533px) {
   section {
     display: flex;
     flex-direction: row;
@@ -16,7 +16,7 @@
     align-items: center;
   }
 }
-@media not all and (min-width: 700px) {
+@media not all and (min-width: 533px) {
   section {
     display: block;
   }
@@ -30,7 +30,7 @@
 }
 #dirs #in,
 #dirs #out {
-  width: 16em;
+  width: 11em;
   border-radius: 1em;
   margin-top: 0;
   margin-bottom: 0;
@@ -74,28 +74,36 @@ a {
 }
 code {
   font-family: Fira Mono;
+  background: #fee;
 }
 pre {
   margin: 0 auto;
-  width: 20em;
+  width: 22em;
   font-family: Fira Mono;
   color: #888;
+  tab-size: 4;
 }
 pre .key:before,
-pre .val:before {
+pre .str:before {
   color: #888;
   content: '"';
 }
 pre .key:after,
-pre .val:after {
+pre .str:after {
   color: #888;
   content: '"';
+}
+pre .key:after {
+  content: '":';
 }
 pre .key {
   color: #048;
 }
-pre .val {
+pre .str {
   color: #c40;
+}
+pre .bool {
+  color: #c08;
 }
 pre.dir {
   color: #000;
@@ -107,4 +115,5 @@ pre.dir {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  font-size: 200%;
 }
