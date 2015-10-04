@@ -1,0 +1,10 @@
+.home {
+  text-align: center;
+}
+.home a {
+  color: #f80;
+}
+.default:before {
+  content: "default: ";
+  color: #888;
+}

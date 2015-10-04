@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>Dum build system for node.js</title><meta description="Dum build system for node.js: alternative to grunt, gulp, broccoli"><link rel="icon" href="icon.svg"><link rel="stylesheet" href="style/layout.css"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+<!DOCTYPE html><html><head><title>Dum build system</title><meta description="Dum build system for node.js: alternative to grunt, gulp, broccoli"><link rel="icon" href="icon.svg"><link rel="stylesheet" href="style/layout.css"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga')
@@ -31,13 +31,13 @@ is your configuration.</p><pre><span class="key">scripts</span> {<span class="ke
 	<span class="key">jstransformer-jade</span> <span class="str"></span>,
 	<span class="key">jstransformer-stylus</span> <span class="str"></span>
 }</pre><p>If you need, you can add more options in <code>package.json</code>.</p><pre><span class="key">dumConfig</span> {
-	<span class="key">transform</span> {
+	<span class="key">opts</span> {
 		<span class="key">jade</span> {<span class="key">pretty</span> <span class="bool">true</span>}
 	}
 }
 </pre><p>Just open a console in your package directory (the one with <code>assets</code> and <code>package.json</code> in it)
-and run <code>npm install</code> and <code>npm start</code> and look at <a href="http://localhost:8000">localhost</a>.</p><p>When you change files, dum will update <code>public</code>, so refresh your browser to see the changes.</p></div></section><section><h1>go!</h1><div class="content"><p>Start by cloning a project template:</p><table id="templates"><col id="link"><tr><td><a href="//github.com/dum-build/dum-web-template">web</a></td><td><code>git clone https://github.com/dum-build/dum-web-template.git</code></td></tr><tr><td><a href="//github.com/dum-build/dum-library-template">library</a></td><td><code>git clone https://github.com/dum-build/dum-library-template.git</code></td></tr></table><p>Libraries work the same as web projects but don't serve anything.</p><p>If you think your website has a great feature, break it out into a
+and run <code>npm install</code> and <code>npm start</code> and look at <a href="http://localhost:8000">localhost:8000</a>.</p><p>When you change files, dum will update <code>public</code>, so refresh your browser to see the changes.</p></div></section><section><h1>go!</h1><div class="content"><p>Start by cloning a project template:</p><table id="templates"><col id="link"><tr><td><a href="//github.com/dum-build/dum-web-template">web</a></td><td><code>git clone https://github.com/dum-build/dum-web-template.git</code></td></tr><tr><td><a href="//github.com/dum-build/dum-library-template">library</a></td><td><code>git clone https://github.com/dum-build/dum-library-template.git</code></td></tr></table><p>Libraries work the same as web projects but don't serve anything.</p><p>If you think your website has a great feature, break it out into a
 <a href="//webcomponents.org">web component</a> and distribute it with
 <a href="//bower.io">bower</a>.
-</p></div></section><section><h1>more</h1><div class="content"><p>Contribute (report bugs or help develop dum) on
-<a href="//github.com/dum-build/dum">github</a>.</p></div></section></main></body></html>
+</p></div></section><section><h1>more</h1><div class="content"><p>Dum is <a href="config">configurable</a>.</p><p>Contribute (report bugs or help develop dum) on
+<a href="//github.com/dum-build/dum">github</a>.</p><p>Similar projects include <a href="//gruntjs.com">grunt</a>, <a href="//gulpjs.com">gulp</a>, and <a href="//github.com/broccolijs/broccoli">broccoli</a>.</p></div></section></main></body></html>
