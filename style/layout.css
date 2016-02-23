@@ -78,6 +78,7 @@ pre {
   width: 22em;
   font-family: Fira Mono;
   color: #888;
+  -moz-tab-size: 4;
   tab-size: 4;
 }
 pre .key:before,
