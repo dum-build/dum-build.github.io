@@ -13,8 +13,8 @@ block content
 			#dirs
 				pre#in.
 					assets/
-						_layout.jade
-						index.jade
+						_layout.pug
+						index.pug
 						style/
 							index.styl
 							_lib.styl
@@ -31,7 +31,7 @@ block content
 
 			p.
 				It's a chore to write html/css/javascript directly.
-				Tools like #[a(href='//jade-lang.com') jade] and
+				Tools like #[a(href='//pugjs.org') pug] and
 				#[a(href='//learnboost.github.io/stylus') stylus] make this neater.
 				Dum brings all of these tools together.
 			p It's based on #[a(href='//nodejs.org') node.js] #[span.aside so install that] but you won't have to write any JavaScript.
@@ -61,7 +61,7 @@ block content
 				#[span.key scripts] {#[span.key start] #[span.str dum serve]},
 				#[span.key devDependencies] {
 					#[span.key dum] #[span.str dum-build/dum],
-					#[span.key jstransformer-jade] #[span.str],
+					#[span.key jstransformer-pug] #[span.str],
 					#[span.key jstransformer-stylus] #[span.str]
 				}
 			p #[span.aside If you need, you can add more #[a(href='config') options].]
